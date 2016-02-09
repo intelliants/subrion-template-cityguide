@@ -1,0 +1,121 @@
+
+.b-card {
+	background: #fff;
+	border-radius: 3px;
+	overflow: hidden;
+
+	&__image {
+
+		img {
+			.img-responsive();
+		}
+	}
+
+	&__content {
+		padding: 20px;
+		color: fade(@text-color, 50%);
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
+
+		> ol {
+			padding-left: 20px;
+		}
+	}
+
+	&__title {
+		font-size: 18px;
+		line-height: 18px;
+		margin-bottom: 10px;
+	}
+
+	&__tags {
+		line-height: 20px;
+		height: 40px;
+		overflow: hidden;
+	}
+
+	&--border {
+
+		.b-card__content {
+			border: 1px solid #eee;
+			border-top: 0 none;
+			text-align: center;
+		}
+	}
+}
+
+.b-card--1 {
+	background-color: #f2f2f2;
+	background-image: url('../img/placeholder-category.png');
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	position: relative;
+
+	.b-card__content {
+		padding-top: 100px;
+		position: relative;
+		z-index: 10;
+	}
+
+	a {
+		color: #fff;
+	}
+
+	&::before {
+		display: block;
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+	}
+}
+
+.b-card--2 {
+
+
+	.b-card__image {
+		position: relative;
+		max-height: 200px;
+		overflow: hidden;
+
+		&__title {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			font-size: 28px;
+			padding: 20px;
+			color: #fff;
+			text-decoration: none;
+			z-index: 20;
+
+			&:hover {
+				text-decoration: underline;
+				color: @link-color;
+			}
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+			background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+			background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+			z-index: 10;
+		}
+	}
+}

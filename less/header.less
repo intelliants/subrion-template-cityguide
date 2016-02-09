@@ -1,0 +1,58 @@
+
+//
+// Header
+// --------------------------------------------------
+
+.header {
+	background: @brand-dark url('../img/bg.jpg') 50% 0 no-repeat;
+	background-size: cover;
+	// height: 320px;
+	position: relative;
+	// overflow: hidden;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		// background: fade(#32004b, 30%);
+		background: fade(@brand-dark, 30%);
+		z-index: 1;
+	}
+
+	> * {
+		position: relative;
+		z-index: 10;
+	}
+
+	&--inner {
+		background: @brand-dark !important;
+	}
+}
+
+.teaser {
+	padding: 120px 0;
+	text-align: center;
+
+	h1 {
+		.font-normalize(34px);
+		color: #fff;
+	}
+
+	h2 {
+		.font-normalize(20px, 10px 0 0);
+		color: fade(#fff, 50%);
+	}
+
+	.box + .box {
+		margin-top: @vertical-rhythm;
+	}
+
+	.header--inner & {
+		padding: 0;
+		background: #f2f2f2;
+	}
+}

@@ -1,0 +1,79 @@
+
+//
+// Inventory
+// --------------------------------------------------
+
+.inv {
+	// height: @inv-height;
+	background: @inv-bg;
+	.clearfix();
+	// display: none;
+
+	&__info {
+		float: left;
+
+		> span {
+			font-size: 12px;
+			float: left;
+			color: @inv-color;
+			line-height: @inv-height;
+			padding: 0 15px 0;
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			> span {
+				margin-right: 5px;
+			}
+		}
+
+		@media (max-width: @screen-md) {
+			display: none;
+		}
+	}
+
+	&__nav {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		float: right;
+
+		> li {
+			float: left;
+			margin: 0;
+
+			> a {
+
+				&,
+				&:focus,
+				&:active {
+					display: block;
+					padding: 0 15px;
+					font-size: 12px;
+					line-height: @inv-height;
+					margin: 0;
+					color: @inv-link-color;
+
+					@media (max-width: @screen-sm) {
+						border: 0;
+						padding: 0 8px;
+					}
+				}
+			}
+		}
+
+		&--langs {
+			@media (max-width: @screen-sm) {
+				float: left;
+
+				> li {
+
+					> a {
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+}
