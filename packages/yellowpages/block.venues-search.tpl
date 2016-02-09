@@ -2,12 +2,12 @@
 	<div class="row">
 		<div class="col-md-5">
 			<div class="b-search__keywords">
-				<input class="form-control input-lg" type="text" name="search" id="search_key" value="{$yp_search_info.term}" placeholder="{lang key='search_what'}">
+				<input class="form-control input-lg" type="text" name="search" id="search_key" value="{$ypSearchInfo.term}" placeholder="{lang key='search_what'}">
 			</div>
 		</div>
 		<div class="col-md-5">
 			<div class="b-search__location">
-				<input class="form-control input-lg" type="text" name="loc" id="search_loc" autocomplete="off" value="{$yp_search_info.location}" data-location="{$yp_search_info.location}">
+				<input class="form-control input-lg" type="text" name="loc" id="search_loc" autocomplete="off" value="{$ypSearchInfo.location}" data-location="{$ypSearchInfo.location}">
 				{if $core.config.yp_obtain_location}
 					<a href="#locationChangeModal" data-toggle="modal"{if !isset($smarty.cookies.location_set)} title="{lang key='location_set_to'} {location get='title'}" data-tooltip="true"{/if}><span class="fa fa-compass"></span></a>
 				{/if}

@@ -2,9 +2,11 @@
 .b-card {
 	background: #fff;
 	border-radius: 3px;
-	overflow: hidden;
+	position: relative;
 
 	&__image {
+		overflow: hidden;
+		border-radius: 3px 3px 0 0;
 
 		img {
 			.img-responsive();
@@ -27,6 +29,8 @@
 	&__title {
 		font-size: 18px;
 		line-height: 18px;
+		height: 36px;
+		overflow: hidden;
 		margin-bottom: 10px;
 	}
 
@@ -34,6 +38,53 @@
 		line-height: 20px;
 		height: 40px;
 		overflow: hidden;
+	}
+
+	&__labels {
+		position: absolute;
+		left: -2px;
+		top: 10px;
+
+		.label {
+			display: block;
+			margin-bottom: 5px;
+			border-radius: 0;
+			text-align: left;
+			padding: 6px;
+		}
+	}
+
+	&__fav {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-size: 20px;
+
+		&,
+		&:focus {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		&:hover {
+			color: @link-color;
+			text-decoration: none;
+		}
+	}
+
+	&__actions {
+		margin-top: 20px;
+		font-size: 11px;
+		text-transform: uppercase;
+		text-align: center;
+
+		a,
+		a:focus {
+			display: inline-block;
+			text-decoration: none;
+			color: fade(@text-color, 50%);
+			margin: 0 6px;
+		}
 	}
 
 	&--border {

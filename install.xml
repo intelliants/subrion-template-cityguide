@@ -111,16 +111,19 @@
 		<menu position="footer_nav" status="active" header="0">bottom</menu>
 		<menu position="footer2" status="active" header="1" title="Quick links" collapsible="0">yellowpages</menu>
 
-		<block position="teaser" status="active" sticky="1" header="0" order="99">companies_search</block>
+		<block position="teaser" status="active" sticky="1" header="0" order="99">venues_search</block>
+		<block position="left" sticky="0" pages="new_venues,random_venues,ylocs_search,yellowpages_index,search,top_venues,ycategs_browse" header="1" status="active" classname="">filters</block>
 		<block position="verytop" status="active" sticky="0" pages="index" header="0" order="1">featured_locations</block>
-		<block position="landing1" status="active" sticky="0" pages="index" header="0" order="2">sponsored_companies</block>
-		<block position="landing2" status="active" sticky="0" pages="index" header="0" order="2">new_companies</block>
-		<block position="landing3" status="active" sticky="0" pages="index" header="0" order="2">popular_companies</block>
+		<block position="left" status="active" sticky="1" header="1">featured_venues</block>
+		<block position="landing1" status="active" sticky="0" pages="index" header="0" order="2">sponsored_venues</block>
+		<block position="landing2" status="active" sticky="0" pages="index" header="0" order="2">new_venues</block>
+		<block position="landing3" status="active" sticky="0" pages="index" header="0" order="2">popular_venues</block>
 		<block position="verybottom" status="active" sticky="0" pages="index" header="0" order="3">popular_categories</block>
 		<block position="verybottom" order="99" status="active" sticky="0" pages="index" header="0">latest_news</block>
 		<block position="system" status="active" sticky="1" header="0">change_location</block>
 		<block position="footer3" sticky="1" header="1" title="From the blog" status="active">new_blog_posts</block>
 		<block position="footer4" sticky="1" header="1" status="active" classname="">top_categories</block>
+		<block position="left" sticky="0" pages="venue_view" header="1" status="active" classname="box--clear">venue_owner</block>
 
 		<block status="inactive" position="left" classname="box--border">common_statistics</block>
 		<block status="inactive">newsline</block>

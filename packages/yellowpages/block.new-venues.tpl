@@ -1,6 +1,6 @@
-{if !empty($sponsored_companies)}
+{if !empty($newVenues)}
 	<div class="row">
-		{foreach $sponsored_companies as $page}
+		{foreach $newVenues as $page}
 			<div class="col-md-3">
 				<div class="b-card b-card--border">
 					<div class="b-card__image">
@@ -17,4 +17,6 @@
 			</div>
 		{/foreach}
 	</div>
+{else}
+	<div class="alert alert-info">No venues</div>
 {/if}

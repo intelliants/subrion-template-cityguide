@@ -1,6 +1,6 @@
-{if !empty($popular_pages)}
+{if !empty($popularVenues)}
 	<div class="row">
-		{foreach $popular_pages as $page}
+		{foreach $popularVenues as $page}
 			<div class="col-md-3">
 				<div class="b-card b-card--border">
 					<div class="b-card__image">
