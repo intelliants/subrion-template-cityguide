@@ -11,14 +11,14 @@
 		</div>
 	{/if}
 
-	{if !empty($venues)}
-		{include file='extra:yellowpages/_sorting'}
+	{if !empty($listings)}
+		{include 'extra:yellowpages/_sorting'}
 
 		<div class="ia-items">
 			<div class="row">
-				{foreach $venues as $venue}
+				{foreach $listings as $venue}
 					<div class="col-md-4">
-						{include file='extra:yellowpages/list-venues' iteration=$venue@iteration}
+						{include 'extra:yellowpages/list-venues' iteration=$venue@iteration}
 					</div>
 
 					{if ($venue@iteration % 3 == 0) && !$venue@last}
@@ -31,6 +31,6 @@
 			{navigation aTotal=$pagination.total aTemplate=$pagination.url aItemsPerPage=$pagination.limit aNumPageItems=5 aTruncateParam=0}
 		</div>
 	{elseif isset($location.id)}
-		<div class="alert alert-info">{lang key='no_venues'}</div>
+		<div class="alert alert-info m-t">{lang key='no_venues'}</div>
 	{/if}
 </div>

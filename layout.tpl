@@ -90,9 +90,6 @@
 					<div class="container">
 						<div class="row">
 							<div class="{width section='content' position='left' tag='col-md-'} aside">
-								{if 'autos_view' != $core.page.name}
-									{ia_blocks block='featured'}
-								{/if}
 								{ia_blocks block='left'}
 							</div>
 							<div class="{width section='content' position='center' tag='col-md-'}">
