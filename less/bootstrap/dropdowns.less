@@ -82,6 +82,15 @@
     line-height: @line-height-base;
     color: @dropdown-link-color;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
+    position: relative;
+
+    > .fa {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      .translate(0,-50%);
+      color: fade(@text-color, 35%);
+    }
   }
 }
 

@@ -220,6 +220,32 @@
   }
 }
 
+.ia-item--alt {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: @border-radius-base;
+
+  .ia-item__image {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: -45px;
+  }
+
+  .ia-item__title {
+    font-size: 16px;
+  }
+
+  p {
+    color: fade(@text-color, 50%);
+    margin: 0;
+    font-size: 12px;
+  }
+
+  & + & {
+    margin-top: @vertical-rhythm;
+  }
+}
+
 .ia-item.has-panel {
   .ia-item__image {
     margin-bottom: @gap;

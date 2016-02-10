@@ -57,13 +57,6 @@
 		    description="Header background"
 		    order="3006"><![CDATA[]]></config>
 
-	<config group="template_cityguide"
-		    name="categories_as_tags"
-		    type="radio" 
-		    order="3007"
-		    values="1,0" 
-		    description="Show categories as tags on inner pages">1</config>
-
 	<config group="template_cityguide" 
 		    name="cityguide_divider2" 
 		    type="divider" 
@@ -114,7 +107,7 @@
 		<block position="teaser" status="active" sticky="1" header="0" order="99">venues_search</block>
 		<block position="left" sticky="0" pages="new_venues,random_venues,ylocs_search,yellowpages_index,search,top_venues,ycategs_browse,ylocs_change" header="1" status="active" classname="">filters</block>
 		<block position="verytop" status="active" sticky="0" pages="index" header="0" order="1">featured_locations</block>
-		<block position="left" status="active" sticky="1" header="1">featured_venues</block>
+		<block position="left" status="active" sticky="1" header="1" classname="box--clear">featured_venues</block>
 		<block position="landing1" status="active" sticky="0" pages="index" header="0" order="2">sponsored_venues</block>
 		<block position="landing2" status="active" sticky="0" pages="index" header="0" order="2">new_venues</block>
 		<block position="landing3" status="active" sticky="0" pages="index" header="0" order="2">popular_venues</block>
@@ -123,7 +116,7 @@
 		<block position="system" status="active" sticky="1" header="0">change_location</block>
 		<block position="footer3" sticky="1" header="1" title="From the blog" status="active">new_blog_posts</block>
 		<block position="footer4" sticky="1" header="1" status="active" classname="">top_categories</block>
-		<block position="left" sticky="0" pages="venue_view" header="1" status="active" classname="box--clear">venue_owner</block>
+		<block position="left" sticky="0" pages="venue_view" header="0" order="-1" status="active" classname="box--clear box--author">venue_owner</block>
 
 		<block status="inactive" position="left" classname="box--border">common_statistics</block>
 		<block status="inactive">newsline</block>
@@ -182,5 +175,7 @@
 		<phrase category="frontend" key="wishlist">Wishlist</phrase>
 		<phrase category="frontend" key="add_to_wishlist">Add to wishlist</phrase>
 		<phrase category="frontend" key="remove_from_wishlist">Remove from wishlist</phrase>
+		<phrase category="frontend" key="less_cats">Show less</phrase>
+		<phrase category="frontend" key="more_cats">Show more</phrase>
 	</phrases>
 </template>

@@ -10,8 +10,12 @@
 						{if isset($category.icon) && $category.icon}
 							<img src="{$core.page.nonProtocolUrl}uploads/{$category.icon.path}" alt="{$category.title}">
 						{else}
-							<span class="fa fa-folder-open"></span>
+							<span class="fa fa-{if isset($category.category_icon_class) && $category.category_icon_class}{$category.category_icon_class}{else}folder{/if}"></span>
 						{/if}
+					{/if}
+
+					{if isset($islocation)}
+						<span class="fa fa-map-marker"></span>
 					{/if}
 
 					{if isset($category.crossed) && $category.crossed}@&nbsp;{/if}<a href="{ia_url type='url' item=$item data=$category}">{$category.title|escape:'html'}</a>

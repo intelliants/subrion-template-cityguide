@@ -26,6 +26,19 @@
     .font-normalize(18px, 0);
     color: @box-caption-color;
     position: relative;
+    border-bottom: 1px solid fade(#333, 10%);
+    padding-bottom: @vertical-rhythm/2;
+
+    &::after {
+      display: block;
+      content: '';
+      width: 40px;
+      height: 2px;
+      background: @link-color;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+    }
   }
 
   &__content {
@@ -44,6 +57,15 @@
     + .box {
       margin-top: @vertical-rhythm;
     }
+  }
+
+  &--clear {
+
+    .aside & {
+      border: 0;
+      padding: 0;
+    }
+    
   }
 }
 
@@ -73,8 +95,7 @@
 .minmax-toggle {
   position: absolute;
   right: 0;
-  top: 50%;
-  margin-top: -12px;
+  top: 0;
   font-size: 24px;
   width: 24px;
   height: 24px;
@@ -114,11 +135,21 @@
 // Author block with short info
 // --------------------------------------------------
 
+#block_venue_owner {
+  padding-top: 60px;
+}
+
 .ia-item-author {
   background: @author-box-bg;
+  border-radius: @border-radius-base;
+  position: relative;
 
   &__image {
-    padding: 30px 30px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -60px;
+    
     display: block;
     text-decoration: none;
 
@@ -126,13 +157,15 @@
       display: block;
       margin: 0 auto;
       border-radius: 50%;
+      border: 4px solid #fff;
     }
   }
 
   &__content {
-    padding: 30px 15px;
+    padding: 30px;
 
-    > h4 {
+    .ia-item__title {
+      margin-top: 40px;
       text-align: center;
     }
 
@@ -143,8 +176,8 @@
 
   .ia-item__additional {
     background: @author-box-additional-bg;
-    margin: 0 -15px 30px;
-    padding: 15px;
+    margin: 0;
+    padding: 15px 0;
 
     p {
       float: none;
@@ -153,5 +186,9 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  p.text-center {
+    text-align: left;
   }
 }

@@ -1,0 +1,39 @@
+.ia-categories {
+
+  &__hidden {
+    display: none;
+  }
+
+  
+}
+
+.ia-categories-more {
+  text-align: center;
+  padding: @vertical-rhythm/2 @vertical-rhythm/2 0;
+
+  a,
+  a:focus {
+    font-size: 16px;
+    text-decoration: none;
+    color: fade(@text-color, 50%);
+    border-bottom: 1px dashed fade(@text-color, 50%);
+
+    &:hover {
+      color: fade(@text-color, 80%);
+      border-bottom-color: fade(@text-color, 80%);
+    }
+  }
+}
+
+.ia-cats {
+
+}
+
+.ia-cat {
+  padding: 3px 0;
+  
+  .fa {
+    font-size: 16px;
+    color: fade(@text-color, 30%);
+  }
+}

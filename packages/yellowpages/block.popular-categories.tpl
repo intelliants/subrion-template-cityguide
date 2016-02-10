@@ -26,7 +26,7 @@
 
 						{if ($entry@iteration % 3 == 0) && !$entry@last}
 							</div>
-							<div class="row m-t">
+							<div class="row m-t-md">
 						{/if}
 					{/foreach}
 				</div>
