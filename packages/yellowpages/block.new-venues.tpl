@@ -18,5 +18,5 @@
 		{/foreach}
 	</div>
 {else}
-	<div class="alert alert-info">No venues</div>
+	<div class="alert alert-info">{lang key='no_venues'}</div>
 {/if}

@@ -136,26 +136,30 @@
 			{if isset($iaBlocks.landing1) || isset($iaBlocks.landing2) || isset($iaBlocks.landing3)}
 				<div class="b-section">
 					<div class="b-section__title">
-						<h2>What is happening around you?</h2>
-						<p>Our friends that you should visit</p>
+						<h2>{lang key='section_venues_title'}</h2>
+						<p>{lang key='section_venues_tag'}</p>
 					</div>
 
 					<div class="b-section__content">
 						<div class="container">
 							<div class="b-section__nav">
 								<ul class="nav nav-pills">
-									<li class="active"><a href="#tab-landing1" data-toggle="tab">Sponsored</a></li>
-									<li><a href="#tab-landing2" data-toggle="tab">New</a></li>
-									<li><a href="#tab-landing3" data-toggle="tab">Popular</a></li>
+									{if isset($iaBlocks.landing1)}
+										<li class="active"><a href="#tab-landing1" data-toggle="tab">{lang key='venues_sponsored'}</a></li>
+									{/if}
+									<li{if !isset($iaBlocks.landing1)} class="active"{/if}><a href="#tab-landing2" data-toggle="tab">{lang key='venues_new'}</a></li>
+									<li><a href="#tab-landing3" data-toggle="tab">{lang key='venues_popular'}</a></li>
 								</ul>
 							</div>
 							
 							<div class="tab-content">
-								<div class="tab-pane fade in active" id="tab-landing1">
-									{ia_blocks block='landing1'}
-									<span class="hidden"></span>
-								</div>
-								<div class="tab-pane fade" id="tab-landing2">
+								{if isset($iaBlocks.landing1)}
+									<div class="tab-pane fade in active" id="tab-landing1">
+										{ia_blocks block='landing1'}
+										<span class="hidden"></span>
+									</div>
+								{/if}
+								<div class="tab-pane fade{if !isset($iaBlocks.landing1)} in active{/if}" id="tab-landing2">
 									{ia_blocks block='landing2'}
 									<span class="hidden"></span>
 								</div>
