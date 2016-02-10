@@ -183,5 +183,9 @@
 		<phrase category="frontend" key="more_cats">Show more</phrase>
 		<phrase category="frontend" key="section_venues_title">What is happening around you?</phrase>
 		<phrase category="frontend" key="section_venues_tag">Our friends that you should visit</phrase>
+		<phrase category="frontend" key="section_featured_locations_title">Locations, totally worth visiting</phrase>
+		<phrase category="frontend" key="section_featured_locations_tag">Explore some of the best tips from around the city from our partners and friends.</phrase>
+		<phrase category="frontend" key="section_popular_categories_title">Popular categories</phrase>
+		<phrase category="frontend" key="section_popular_categories_tag">Explore some of the best tips from around the city from our partners and friends.</phrase>
 	</phrases>
 </template>
