@@ -24,7 +24,7 @@
 		<link rel="shortcut icon" href="{if !empty($core.config.site_favicon)}{$core.page.nonProtocolUrl}uploads/{$core.config.site_favicon}{else}{$core.page.nonProtocolUrl}favicon.ico{/if}">
 
 		{ia_add_media files="jquery, subrion, bootstrap" order=0}
-		{ia_print_js files='_IA_TPL_owl.carousel.min, _IA_TPL_app' order=999}
+		{ia_print_js files='_IA_TPL_owl.carousel.min, _IA_TPL_jquery.vide.min, _IA_TPL_app' order=999}
 
 		{ia_hooker name='smartyFrontAfterHeadSection'}
 
@@ -40,7 +40,16 @@
 	</head>
 
 	<body class="page-{$core.page.name}{*if $core.config.fixed_navbar} -fixed-navbar{/if*}">
-		<header{if $core.config.website_bg} style="background-image: url('{$core.page.nonProtocolUrl}uploads/{$core.config.website_bg}');"{/if} class="header{if 'index' != $core.page.name} header--inner{/if}">
+		<header
+			{if 'index' == $core.page.name && $core.config.use_video_bg} 
+				data-vide-bg="{$img}video/NYC-Traffic"
+				data-vide-options="posterType: jpg, position: 50% 80%"
+				style="background: transparent;"
+			{elseif $core.config.website_bg} 
+				style="background-image: url('{$core.page.nonProtocolUrl}uploads/{$core.config.website_bg}');"
+			{/if} 
+			class="header{if 'index' != $core.page.name} header--inner{/if}"
+		>
 			<nav class="navbar navbar-default navbar-transparent">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->

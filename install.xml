@@ -52,6 +52,13 @@
 		    order="3002">5</config>
 
 	<config group="template_cityguide" 
+		    name="use_video_bg" 
+		    type="radio" 
+		    values="1,0" 
+		    description="Use video as background"
+		    order="3005">1</config>
+
+	<config group="template_cityguide" 
 		    name="website_bg" 
 		    type="image" 
 		    description="Header background"
@@ -63,7 +70,7 @@
 		    order="3030">Social links</config>
 	
 	<config group="template_cityguide"
-			name="template_social"
+		    name="template_social"
 		    type="radio" 
 		    order="3031"
 		    values="1,0" 
