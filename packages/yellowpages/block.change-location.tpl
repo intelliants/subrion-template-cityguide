@@ -21,9 +21,9 @@
 						{/if}
 					</div>
 				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+			</div>
+		</div>
+	</div>
 
 	{ia_add_js}
 $(function()
@@ -48,7 +48,7 @@ $(function()
 		{
 			$.ajax(
 			{
-				url: intelli.config.ia_url + 'search/venues/read.json',
+				url: intelli.config.ia_url + 'venues/search/read.json',
 				data: { action: 'autocomplete', mask: val },
 				success: function(data)
 				{
