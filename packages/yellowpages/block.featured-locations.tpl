@@ -11,13 +11,12 @@
 					{foreach $featuredLocations[0] as $location}
 						<div class="col-md-4">
 							<div class="b-card b-card--2">
-								<div class="b-card__image">
-									{if $location.location_image}
-										{$loc_img = unserialize($location.location_image)}
-										<img src="{$smarty.const.IA_CLEAR_URL}uploads/{$loc_img.path}" alt="">
-									{else}
-										<img src="{$img}placeholder-category.png" alt="">
-									{/if}
+								{$loc_img = "{$img}placeholder-category.png"}
+								{if $location.location_image}
+									{$loc_img_arr = unserialize($location.location_image)}
+									{$loc_img = "{$core.page.nonProtocolUrl}uploads/{$loc_img_arr.path}"}
+								{/if}
+								<div class="b-card__image" style="background-image: url({$loc_img});">
 									<a href="{ia_url item='ylocs' type='url' data=$location}" class="b-card__image__title">{$location.title}</a>
 								</div>
 								<div class="b-card__content">
@@ -25,6 +24,12 @@
 										<ol>
 											{foreach $featuredLocations[1][$location.id] as $entry}
 												<li>
+													{if $entry.image}
+														{$entry_img = unserialize($entry.image)}
+														<img src="{$core.page.nonProtocolUrl}uploads/{$entry_img.path}" alt="">
+													{else}
+														<img src="{$img}no-preview.png" alt="">
+													{/if}
 													{ia_url item='venues' type='link' data=$entry text=$entry.venue_title}
 													<p>{$entry.category}</p>
 												</li>

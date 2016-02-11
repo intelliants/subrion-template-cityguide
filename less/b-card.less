@@ -22,7 +22,26 @@
 		}
 
 		> ol {
-			padding-left: 20px;
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+
+			li {
+				.clearfix();
+				margin-top: 10px;
+
+				img {
+					float: left;
+					max-width: 40px;
+					border-radius: @border-radius-base;
+				}
+
+				a,
+				p {
+					display: block;
+					margin-left: 50px;
+				}
+			}
 		}
 	}
 
@@ -184,8 +203,11 @@
 
 	.b-card__image {
 		position: relative;
-		max-height: 200px;
 		overflow: hidden;
+		padding-top: 120px;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
 
 		&__title {
 			position: absolute;
