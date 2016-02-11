@@ -94,6 +94,22 @@
 			border-top: 0 none;
 			text-align: center;
 		}
+
+		@media (max-width: @screen-md) {
+			.b-card__image {
+				max-width: 100px;
+			}
+
+			.b-card__content {
+				border: 0 none;
+				text-align: left;
+				padding-top: 0;
+			}
+
+			.b-card__title {
+				height: auto;
+			}
+		}
 	}
 
 	@media (max-width: @screen-md) {
@@ -101,11 +117,13 @@
 
 		&__image {
 			float: left;
-			width: 150px;
+			max-width: 300px;
+			border-radius: 0;
 		}
 
 		&__content {
-			margin-left: 160px;
+			overflow: hidden;
+			border: 0 none;
 		}
 	}
 }

@@ -54,17 +54,31 @@
 		}
 	}
 
+	.btn {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
 	@media (max-width: @screen-md) {
 		.form-control {
 			margin-bottom: 5px;
 			border-radius: @border-radius-base !important;
 		}
+
+		.btn {
+			border-radius: @border-radius-base !important;
+		}
 	}
 
-	.btn {
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
+	@media (max-width: @screen-sm) {
+		padding: 0 40px;
+
+		[class*="col-"] + [class*="col-"] {
+			margin: 0;
+		}
 	}
+
+
 
 	&--inner {
 		display: block;
