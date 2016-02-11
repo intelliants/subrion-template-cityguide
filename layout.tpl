@@ -40,7 +40,7 @@
 	</head>
 
 	<body class="page-{$core.page.name}{*if $core.config.fixed_navbar} -fixed-navbar{/if*}">
-		<header{if $core.config.website_bg} style="background-image: url('{$smarty.const.IA_URL}uploads/{$core.config.website_bg}');"{/if} class="header{if 'index' != $core.page.name} header--inner{/if}">
+		<header{if $core.config.website_bg} style="background-image: url('{$core.page.nonProtocolUrl}uploads/{$core.config.website_bg}');"{/if} class="header{if 'index' != $core.page.name} header--inner{/if}">
 			<nav class="navbar navbar-default navbar-transparent">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->

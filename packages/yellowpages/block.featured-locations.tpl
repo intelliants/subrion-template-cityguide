@@ -15,6 +15,8 @@
 									{if $location.location_image}
 										{$loc_img = unserialize($location.location_image)}
 										<img src="{$smarty.const.IA_CLEAR_URL}uploads/{$loc_img.path}" alt="">
+									{else}
+										<img src="{$img}placeholder-category.png" alt="">
 									{/if}
 									<a href="{ia_url item='ylocs' type='url' data=$location}" class="b-card__image__title">{$location.title}</a>
 								</div>
@@ -28,6 +30,8 @@
 												</li>
 											{/foreach}
 										</ol>
+									{else}
+										<p class="text-fade-50">{lang key='no_venues_here'}</p>
 									{/if}
 								</div>
 							</div>
