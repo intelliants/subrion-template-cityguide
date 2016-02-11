@@ -33,7 +33,6 @@ $(function()
 				url: intelli.config.packages.yellowpages.url + 'yellowpages/read.json',
 				type: 'get',
 				dataType: 'json',
-				displayField: 'title',
 				data: { action: 'autocomplete', q: query },
 				success: function(data)
 				{
