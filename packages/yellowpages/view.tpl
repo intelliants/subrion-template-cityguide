@@ -35,6 +35,18 @@
 						<td>{$item.phone}</td>
 					</tr>
 				{/if}
+				{if $item.local_phone}
+					<tr>
+						<td>{lang key='field_local_phone'}</td>
+						<td>{$item.local_phone}</td>
+					</tr>
+				{/if}
+				{if $item.fax}
+					<tr>
+						<td>{lang key='field_fax'}</td>
+						<td>{$item.fax}</td>
+					</tr>
+				{/if}
 				{if $item.url}
 					<tr>
 						<td>{lang key='field_url'}</td>
@@ -115,7 +127,7 @@
 
 {ia_hooker name='smartyItemListBeforeInfoPost'}
 
-{include file='item-view-tabs.tpl' isView=true exceptions=array('venue_title', 'description', 'address', 'zipcode', 'url', 'phone', 'email', 'image', 'gallery', 'products_services', 'working_hours', 'payments_methods')}
+{include file='item-view-tabs.tpl' isView=true exceptions=array('venue_title', 'description', 'address', 'zipcode', 'url', 'phone', 'local_phone', 'fax', 'email', 'image', 'gallery', 'products_services', 'working_hours', 'payments_methods')}
 
 {ia_hooker name='smartyViewListingBeforeFooter'}
 

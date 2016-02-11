@@ -1,8 +1,8 @@
 {if !empty($featuredLocations[0])}
 	<div class="b-section b-section--alt">
 		<div class="b-section__title">
-			<h2>Locations, totally worth visiting</h2>
-			<p>Explore some of the best tips from around the city from our partners and friends.</p>
+			<h2>{lang key='section_featured_locations_title'}</h2>
+			<p>{lang key='section_featured_locations_tag'}</p>
 		</div>
 
 		<div class="b-section__content">

@@ -17,4 +17,6 @@
 			</div>
 		{/foreach}
 	</div>
+{else}
+	<div class="alert alert-info">{lang key='no_venues'}</div>
 {/if}

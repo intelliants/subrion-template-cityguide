@@ -175,7 +175,17 @@
 		<phrase category="frontend" key="wishlist">Wishlist</phrase>
 		<phrase category="frontend" key="add_to_wishlist">Add to wishlist</phrase>
 		<phrase category="frontend" key="remove_from_wishlist">Remove from wishlist</phrase>
+		<phrase category="frontend" key="no_venues">No venues. Please check back later.</phrase>
+		<phrase category="frontend" key="venues_sponsored">Sponsored</phrase>
+		<phrase category="frontend" key="venues_new">New</phrase>
+		<phrase category="frontend" key="venues_popular">Popular</phrase>
 		<phrase category="frontend" key="less_cats">Show less</phrase>
 		<phrase category="frontend" key="more_cats">Show more</phrase>
+		<phrase category="frontend" key="section_venues_title">What is happening around you?</phrase>
+		<phrase category="frontend" key="section_venues_tag">Our friends that you should visit</phrase>
+		<phrase category="frontend" key="section_featured_locations_title">Locations, totally worth visiting</phrase>
+		<phrase category="frontend" key="section_featured_locations_tag">Explore some of the best tips from around the city from our partners and friends.</phrase>
+		<phrase category="frontend" key="section_popular_categories_title">Popular categories</phrase>
+		<phrase category="frontend" key="section_popular_categories_tag">Explore some of the best tips from around the city from our partners and friends.</phrase>
 	</phrases>
 </template>

@@ -1,8 +1,8 @@
 {if !empty($ypPopularCategories.top)}
 	<div class="b-section b-section--alt">
 		<div class="b-section__title">
-			<h2>Popular categories</h2>
-			<p>Explore some of the best tips from around the city from our partners and friends.</p>
+			<h2>{lang key='section_popular_categories_title'}</h2>
+			<p>{lang key='section_popular_categories_tag'}</p>
 		</div>
 
 		<div class="b-section__content">
