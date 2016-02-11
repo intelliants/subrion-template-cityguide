@@ -14,10 +14,7 @@
 								<div class="b-card__content">
 									<div class="b-card__title">{ia_url item='ycategs' type='link' data=$entry text=$entry.title}</div>
 									<div class="b-card__tags">
-										{if isset($ypPopularCategories.children[$entry.id])}
-											{foreach $ypPopularCategories.children[$entry.id] as $subEntry}
-												<a href="{ia_url item='ycategs' type='url' data=$subEntry}">{$subEntry.title|escape:'html'}</a>
-											{/foreach}
+										{if isset($ypPopularCategories.children[$entry.id])}{foreach $ypPopularCategories.children[$entry.id] as $subEntry}<a href="{ia_url item='ycategs' type='url' data=$subEntry}">{$subEntry.title|escape:'html'}</a>{if !$subEntry@last}<span>&middot;</span>{/if}{/foreach}
 										{/if}
 									</div>
 								</div>
