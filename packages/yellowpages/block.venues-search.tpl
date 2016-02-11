@@ -1,4 +1,4 @@
-<form action="{$smarty.const.IA_URL}search/venues/" method="get" class="b-search{if 'index' != $core.page.name} b-search--inner{/if}">
+<form action="{$smarty.const.IA_URL}venues/search/" class="b-search{if 'index' != $core.page.name} b-search--inner{/if}">
 	<div class="row">
 		<div class="col-md-5">
 			<div class="b-search__keywords">
@@ -30,7 +30,7 @@ $(function()
 
 			return $.ajax(
 			{
-				url: intelli.config.ia_url + 'search/venues/read.json',
+				url: intelli.config.packages.yellowpages.url + 'yellowpages/read.json',
 				type: 'get',
 				dataType: 'json',
 				displayField: 'title',
