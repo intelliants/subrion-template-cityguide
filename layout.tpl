@@ -151,10 +151,10 @@
 							<div class="b-section__nav">
 								<ul class="nav nav-pills">
 									{if isset($iaBlocks.landing1)}
-										<li class="active"><a href="#tab-landing1" data-toggle="tab">{lang key='venues_sponsored'}</a></li>
+										<li class="active"><a href="#tab-landing1" data-toggle="tab"><span class="fa fa-star"></span> {lang key='venues_sponsored'}</a></li>
 									{/if}
-									<li{if !isset($iaBlocks.landing1)} class="active"{/if}><a href="#tab-landing2" data-toggle="tab">{lang key='venues_new'}</a></li>
-									<li><a href="#tab-landing3" data-toggle="tab">{lang key='venues_popular'}</a></li>
+									<li{if !isset($iaBlocks.landing1)} class="active"{/if}><a href="#tab-landing2" data-toggle="tab"><span class="fa fa-bolt"></span> {lang key='venues_new'}</a></li>
+									<li><a href="#tab-landing3" data-toggle="tab"><span class="fa fa-heart"></span> {lang key='venues_popular'}</a></li>
 								</ul>
 							</div>
 							
