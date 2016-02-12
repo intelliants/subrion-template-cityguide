@@ -5,16 +5,17 @@
 	position: relative;
 
 	&__image {
-		overflow: hidden;
-		border-radius: 3px 3px 0 0;
+		// overflow: hidden;
+		position: relative;
 
 		img {
 			.img-responsive();
+			border-radius: 3px 3px 0 0;
 		}
 	}
 
 	&__content {
-		padding: 20px;
+		padding: 30px;
 		color: fade(@text-color, 50%);
 
 		> *:last-child {
@@ -100,6 +101,26 @@
 		&:hover {
 			color: @link-color;
 			text-decoration: none;
+		}
+	}
+
+	&__cat {
+		position: absolute;
+		left: 50%;
+		.translate(-50%,0);
+		bottom: -27px;
+		text-align: center;
+		width: 54px;
+		height: 54px;
+		background: #fff;
+		text-decoration: none;
+		border-radius: 50%;
+		.box-shadow(0 -5px 5px rgba(0,0,0,.45));
+
+		.fa {
+			font-size: 26px;
+			line-height: 54px;
+			color: #ccc;
 		}
 	}
 
