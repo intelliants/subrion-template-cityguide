@@ -7,6 +7,11 @@
 						<a href="{ia_url item='venues' type='url' data=$page}">
 							{printImage imgfile=$page.image.path|default:'' title=$page.venue_title}
 						</a>
+
+						{printFavorites item=$page itemtype='venues' guests=true tpl='no-text' classname='b-card__fav'}
+						{if 'yellowpages_home' != $core.page.name && isset($page.category_title) && '' != $page.category_title}
+							<a class="b-card__cat" href="{ia_url item='ycategs' type='url' data=$page action='view'}" data-toggle="tooltip" title="{$page.category_title}"><span class="fa fa-{if $page.category_icon_class}{$page.category_icon_class}{else}folder{/if}"></span></a>
+						{/if}
 					</div>
 					<div class="b-card__content">
 						{ia_hooker name='smartyItemBlockBeforeTitle'}
