@@ -1,9 +1,14 @@
 <div class="ia-item-view">
 	<div class="ia-item-view__info">
+		{if isset($actionClaimListing)}
+			<span class="ia-item-view__info__item pull-right">
+				<a class="btn btn-xs btn-info" id="{$actionClaimListing.id}" {foreach $actionClaimListing.attributes as $attr => $value}{$attr}="{$value}" {/foreach}>{$actionClaimListing.title}</a>
+			</span>
+		{/if}
 		{if $item.sponsored}<span class="ia-item-view__info__item"><span class="label label-warning">{lang key='sponsored'}</span></span>{/if}
 		{if $item.featured}<span class="ia-item-view__info__item"><span class="label label-info">{lang key='featured'}</span></span>{/if}
 		<span class="ia-item-view__info__item" title="{lang key='category'}">
-			<span class="fa fa-folder-o"></span> 
+			<span class="fa fa-folder-o"></span>
 			{foreach $categories as $category}
 				{ia_url item='ycategs' type='link' data=$category text=$category.title}
 				{if !$category@last}/{/if}
@@ -92,7 +97,7 @@
 			{ia_add_media files='fotorama'}
 
 			<div class="ia-item-view__gallery">
-				<div class="fotorama" 
+				<div class="fotorama"
 					 data-nav="thumbs"
 					 data-width="100%"
 					 data-ratio="800/400"
@@ -107,11 +112,7 @@
 	{/if}
 </div>
 
-{if isset($actionClaimListing)}
-	<div class="text-center m-t">
-		<a class="btn btn-primary" id="{$actionClaimListing.id}" {foreach $actionClaimListing.attributes as $attr => $value}{$attr}="{$value}" {/foreach}>{$actionClaimListing.title}</a>
-	</div>
-{/if}
+
 
 {ia_hooker name='smartyItemListBeforeInfoPost'}
 
