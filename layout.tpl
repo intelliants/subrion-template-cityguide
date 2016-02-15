@@ -9,7 +9,7 @@
 		<meta name="description" content="{$core.page['meta-description']}">
 		<meta name="keywords" content="{$core.page['meta-keywords']}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="generator" content="Subrion CMS {$core.config.version} - Open Source Content Management System">
+		<meta name="generator" content="Subrion CMS - Open Source Content Management System">
 		<meta name="robots" content="index">
 		<meta name="robots" content="follow">
 		<meta name="revisit-after" content="1 day">
@@ -41,13 +41,13 @@
 
 	<body class="page-{$core.page.name}{*if $core.config.fixed_navbar} -fixed-navbar{/if*}">
 		<header
-			{if 'index' == $core.page.name && $core.config.use_video_bg} 
+			{if 'index' == $core.page.name && $core.config.use_video_bg}
 				data-vide-bg="{$img}video/NYC-Traffic"
 				data-vide-options="posterType: jpg, position: 50% 80%"
 				style="background: transparent;"
-			{elseif $core.config.website_bg} 
+			{elseif $core.config.website_bg}
 				style="background-image: url('{$core.page.nonProtocolUrl}uploads/{$core.config.website_bg}');"
-			{/if} 
+			{/if}
 			class="header{if 'index' != $core.page.name} header--inner{/if}"
 		>
 			<nav class="navbar navbar-default navbar-transparent">
@@ -157,7 +157,7 @@
 									<li><a href="#tab-landing3" data-toggle="tab"><span class="fa fa-heart"></span> {lang key='venues_popular'}</a></li>
 								</ul>
 							</div>
-							
+
 							<div class="tab-content">
 								{if isset($iaBlocks.landing1)}
 									<div class="tab-pane fade in active" id="tab-landing1">
