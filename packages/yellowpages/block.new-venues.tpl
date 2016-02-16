@@ -20,6 +20,11 @@
 					</div>
 				</div>
 			</div>
+
+			{if ($page@iteration % 4 == 0) && !$page@last}
+				</div>
+				<div class="row m-t">
+			{/if}
 		{/foreach}
 	</div>
 {else}

@@ -40,6 +40,11 @@
 								</div>
 							</div>
 						</div>
+
+						{if ($location@iteration % 3 == 0) && !$location@last}
+							</div>
+							<div class="row m-t">
+						{/if}
 					{/foreach}
 				</div>
 			</div>
