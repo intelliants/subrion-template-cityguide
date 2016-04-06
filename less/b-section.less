@@ -53,6 +53,10 @@
 					border: 1px solid @lines-color;
 					min-width: 130px;
 					border-radius: 0;
+
+					@media (max-width: @grid-float-breakpoint) {
+						min-width: 0;
+					}
 				}
 
 				&.active > a,
