@@ -13,7 +13,7 @@
 							<div class="b-card b-card--2">
 								{$loc_img = "{$img}placeholder-category.png"}
 								{if $location.location_image}
-									{$loc_img = "{$core.page.nonProtocolUrl}uploads/{$location.location_image.path}"}
+									{$loc_img = "{ia_image file=$location.location_image url=true}"}
 								{/if}
 								<div class="b-card__image" style="background-image: url({$loc_img});">
 									<a href="{ia_url item='ylocs' type='url' data=$location}" class="b-card__image__title">{$location.title}</a>

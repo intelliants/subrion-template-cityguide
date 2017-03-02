@@ -4,7 +4,7 @@
 			<div class="ia-item--alt">
 				<div class="ia-item">
 					<a class="ia-item__image" href="{ia_url item='venues' type='url' data=$entry}">
-						{printImage imgfile=$entry.image.path|default:'' width=50 title=$entry.venue_title class='img-responsive'}
+						{ia_image file=$entry.image width=50 title=$entry.venue_title class='img-responsive'}
 					</a>
 
 					<div class="ia-item__content">

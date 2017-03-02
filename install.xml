@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<template name="cityguide">
+<module type="template" name="cityguide">
 	<title>CityGuide</title>
 	<summary>Template for Subrion Business Directory</summary>
 	<author>Gleb Surinov</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>1.0.1</version>
-	<date>2016-04-06</date>
-	<compatibility>4.0</compatibility>
+	<version>1.1.0</version>
+	<date>2016-03-02</date>
+	<compatibility>4.1</compatibility>
 
 	<dependency type="package" exist="1">yellowpages</dependency>
 
@@ -200,4 +200,4 @@
 		<phrase category="frontend" key="section_popular_categories_title">Popular categories</phrase>
 		<phrase category="frontend" key="section_popular_categories_tag">Explore some of the best tips from around the city from our partners and friends.</phrase>
 	</phrases>
-</template>
+</module>

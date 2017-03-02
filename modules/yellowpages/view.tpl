@@ -20,7 +20,7 @@
 
 	{if $item.image}
 		<div class="ia-item-view__section">
-			{printImage imgfile=$item.image.path|default:'' fullimage=true title=$item.venue_title class='img-responsive ia-item-view__image'}
+			{ia_image file=$item.image type='large' title=$item.venue_title class='img-responsive ia-item-view__image'}
 		</div>
 	{/if}
 
@@ -36,13 +36,13 @@
 				</tr>
 				{if $item.phone}
 					<tr>
-						<td>{lang key='field_phone'}</td>
+						<td>{lang key='field_venues_phone'}</td>
 						<td>{$item.phone}</td>
 					</tr>
 				{/if}
 				{if $item.url}
 					<tr>
-						<td>{lang key='field_url'}</td>
+						<td>{lang key='field_venues_url'}</td>
 						<td>
 							{assign var='url' value='|'|explode:$item.url}
 							<span class="fa fa-external-link"></span> <a href="{$url[0]}" target="_blank">{$url[1]}</a>
@@ -51,23 +51,23 @@
 				{/if}
 				{if $item.email}
 					<tr>
-						<td>{lang key='field_email'}</td>
+						<td>{lang key='field_venues_email'}</td>
 						<td><a href="mailto:{$item.email}" target="_blank">{$item.email}</a></td>
 					</tr>
 				{/if}
 				{if $item.working_hours}
 					<tr>
-						<td>{lang key='field_working_hours'}</td>
+						<td>{lang key='field_venues_working_hours'}</td>
 						<td>{$item.working_hours}</td>
 					</tr>
 				{/if}
 				{if $item.payments_methods}
 					<tr>
-						<td>{lang key='field_payments_methods'}</td>
+						<td>{lang key='field_venues_payments_methods'}</td>
 						<td>
 							{$payment_methods = explode(',', $item.payments_methods)}
 							{foreach $payment_methods as $one}
-								{lang key="field_payments_methods_{$one}"}{if !$one@last}, {/if}
+								{lang key="field_venues_payments_methods+{$one}"}{if !$one@last}, {/if}
 							{/foreach}
 						</td>
 					</tr>
@@ -84,7 +84,7 @@
 
 	{if trim($item.products_services)}
 	<div class="ia-item-view__section">
-		<h3>{lang key='field_products_services'}</h3>
+		<h3>{lang key='field_venues_products_services'}</h3>
 
 		{$item.products_services}
 	</div>
@@ -92,7 +92,7 @@
 
 	{if $item.gallery}
 		<div class="ia-item-view__section">
-			<h3>{lang key='field_gallery'}</h3>
+			<h3>{lang key='field_venues_gallery'}</h3>
 
 			{ia_add_media files='fotorama'}
 
@@ -104,7 +104,7 @@
 					 data-allowfullscreen="true"
 					 data-fit="cover">
 					{foreach $item.gallery as $entry}
-						<a class="ia-item-view__gallery__item" href="{printImage imgfile=$entry.path url=true fullimage=true}">{printImage imgfile=$entry.path title=$entry.title}</a>
+						<a class="ia-item-view__gallery__item" href="{ia_image file=$entry url=true type='large'}">{ia_image file=$entry}</a>
 					{/foreach}
 				</div>
 			</div>

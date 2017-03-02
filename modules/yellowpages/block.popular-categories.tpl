@@ -10,7 +10,7 @@
 				<div class="row">
 					{foreach $ypPopularCategories.top as $entry}
 						<div class="col-md-4">
-							<div class="b-card b-card--1"{if $entry.category_image} style="background-image: url('{$core.page.nonProtocolUrl}uploads/{$entry.category_image.path}');"{/if}>
+							<div class="b-card b-card--1"{if $entry.category_image} style="background-image: url('{ia_image file=$entry.category_image url=true}');"{/if}>
 								<div class="b-card__content">
 									<div class="b-card__title">{ia_url item='ycategs' type='link' data=$entry text=$entry.title}</div>
 									<div class="b-card__tags">

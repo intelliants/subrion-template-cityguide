@@ -10,7 +10,7 @@
 			{*<li class="hidden-xs"><a href="{$smarty.const.IA_URL}favorites/"><span class="fa fa-star text-warning"></span> {lang key='wishlist'}</a></li>*}
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="{$member.fullname|default:$member.username}">
-					{printImage imgfile=$member.avatar title=$member.fullname|default:$member.username class='img-circle' gravatar=true email=$member.email width=34}
+					{ia_image file=$member.avatar title=$member.fullname|default:$member.username class='img-circle' gravatar=true email=$member.email width=34}
 				</a>
 				{ia_hooker name='smartyFrontInsideAccountBox'}
 				{ia_menu menus=$menu.contents class='dropdown-menu pull-right' loginout=true}
