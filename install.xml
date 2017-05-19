@@ -5,7 +5,7 @@
     <author>Gleb Surinov</author>
     <contributor>Intelliants LLC</contributor>
     <version>1.1.0</version>
-    <date>2016-03-02</date>
+    <date>2017-05-19</date>
     <compatibility>4.1</compatibility>
 
     <dependency type="package" exist="1">yellowpages</dependency>
