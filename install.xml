@@ -127,7 +127,7 @@
         <block position="verybottom" order="99" status="active" sticky="0" pages="index" header="0">latest_news</block>
         <block position="system" status="active" sticky="1" header="0">change_location</block>
         <block position="footer3" sticky="1" header="1" title="From the blog" status="active">new_blog_posts</block>
-        <block position="footer4" sticky="1" header="1" status="active" classname="">top_categories</block>
+        <block position="footer4" sticky="1" header="1" status="active" classname="">yp_top_categories</block>
         <block position="left" sticky="0" pages="venue_view" header="0" order="-1" status="active" classname="box--clear box--author">venue_owner</block>
 
         <block status="inactive" position="left" classname="box--border">common_statistics</block>
