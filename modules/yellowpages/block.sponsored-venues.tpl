@@ -5,7 +5,7 @@
                 <div class="b-card b-card--border">
                     <div class="b-card__image">
                         <a href="{$entry.link}">
-                            {ia_image file=$entry.image type='thumbnail' title=$entry.venue_title}
+                            {ia_image file=$entry.image title=$entry.venue_title class='img-responsive' type='thumbnail'}
                         </a>
 
                         {printFavorites item=$entry itemtype='venues' guests=true tpl='no-text' classname='b-card__fav'}
