@@ -43,9 +43,15 @@
     <body class="page-{$core.page.name}{*if $core.config.fixed_navbar} -fixed-navbar{/if*}">
         <header
             {if 'index' == $core.page.name && $core.config.use_video_bg}
-                data-vide-bg="{$img}video/NYC-Traffic"
-                data-vide-options="posterType: jpg, position: 50% 80%"
-                style="background: transparent;"
+                {if !empty($core.config.local_video_url)}
+                    data-vide-bg="{$core.page.nonProtocolUrl}{$core.config.local_video_url}"
+                    data-vide-options="posterType: none"
+                    style="background: transparent;"
+                {else}
+                    data-vide-bg="{$img}video/NYC-Traffic"
+                    data-vide-options="posterType: jpg, position: 50% 80%"
+                    style="background: transparent;"
+                {/if}
             {elseif $core.config.website_bg}
                 style="background-image: url('{$core.page.nonProtocolUrl}uploads/{$core.config.website_bg}');"
             {/if}

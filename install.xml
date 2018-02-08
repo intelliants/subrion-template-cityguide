@@ -64,6 +64,13 @@
             order="3005">1</config>
 
     <config group="template_cityguide"
+            name="local_video_url"
+            type="text"
+            show="use_video_bg|1"
+            description="Path to video file"
+            order="3002"><![CDATA[]]></config>
+
+    <config group="template_cityguide"
             name="website_bg"
             type="image"
             description="Header background"
@@ -110,6 +117,10 @@
             type="hidden"
             description="CKEditor CSS"
             order="3099">ckeditor.css</config>
+
+    <tooltips>
+        <tooltip key="local_video_url">Relative path to video file in uploads folder (example: uploads/videofilename). mp4, webm and ogv formats are allowed</tooltip>
+    </tooltips>
 
     <changeset>
         <menu position="account" status="active">account</menu>
