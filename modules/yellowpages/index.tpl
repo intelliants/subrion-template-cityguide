@@ -4,7 +4,7 @@
 
         {if !empty($categories)}
             <div class="ia-categories js-categories">
-                {include file='ia-categories.tpl' categories=$categories item='ycategs' show_amount=true num_columns=$core.config.yp_categories_columns icons=true}
+                {include 'ia-categories.tpl' categories=$categories item='ycateg' show_amount=true num_columns=$core.config.yp_categories_columns icons=true}
 
                 {if count($categories) > 12}
                     <div class="ia-categories-more"><a class="js-more-cats" href="#" data-less-cats-text="<span class='fa fa-angle-up'></span> {lang key='less_cats'}" data-more-cats-text="<span class='fa fa-angle-down'></span> {lang key='more_cats'}"><span class="fa fa-angle-down"></span> {lang key='more_cats'}</a></div>

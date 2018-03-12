@@ -77,7 +77,7 @@
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="navbar-collapse">
-                        {include file='language-selector.tpl'}
+                        {include 'language-selector.tpl'}
                         {ia_blocks block='account'}
                         {ia_blocks block='mainmenu'}
                     </div>
@@ -92,7 +92,7 @@
         <div class="body">
             {ia_hooker name='smartyFrontBeforeBreadcrumb'}
 
-            {include file='breadcrumb.tpl'}
+            {include 'breadcrumb.tpl'}
 
             {if isset($iaBlocks.verytop)}
                 <div class="verytop">
@@ -129,7 +129,7 @@
                                     </div>
 
                                     {ia_hooker name='smartyFrontBeforeNotifications'}
-                                    {include file='notification.tpl'}
+                                    {include 'notification.tpl'}
 
                                     {ia_hooker name='smartyFrontBeforeMainContent'}
 
@@ -239,7 +239,7 @@
         {/if}
 
         {if isset($manageMode)}
-            {include file='visual-mode.tpl'}
+            {include 'visual-mode.tpl'}
         {/if}
 
         {if isset($previewMode)}

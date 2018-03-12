@@ -114,7 +114,7 @@
 
 {ia_hooker name='smartyItemListBeforeInfoPost'}
 
-{include file='item-view-tabs.tpl' isView=true exceptions=array('venue_title', 'description', 'address', 'zipcode', 'url', 'phone', 'email', 'image', 'gallery', 'products_services', 'working_hours', 'payments_methods')}
+{include 'item-view-tabs.tpl' isView=true exceptions=['venue_title', 'description', 'address', 'zipcode', 'url', 'phone', 'email', 'image', 'gallery', 'products_services', 'working_hours', 'payments_methods']}
 
 {ia_hooker name='smartyViewListingBeforeFooter'}
 

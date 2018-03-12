@@ -15,22 +15,22 @@
 
         <div class="ia-item__additional">
             {if !empty($listing.phone)}
-                <p><span class="fa fa-phone"></span> {$listing.phone}</p>
+                <p><span class="fa fa-phone"></span> {$listing.phone|escape}</p>
             {/if}
             {if !empty($listing.website)}
-                <p><span class="fa fa-globe"></span> <a href="{$listing.website}">{lang key='field_member_website'}</a></p>
+                <p><span class="fa fa-globe"></span> <a href="{$listing.website|escape}">{lang key='field_member_website'}</a></p>
             {/if}
             {if !empty($listing.facebook)}
-                <p><span class="fa fa-facebook"></span> <a href="{$listing.facebook}">{lang key='field_member_facebook'}</a></p>
+                <p><span class="fa fa-facebook"></span> <a href="{$listing.facebook|escape}">{lang key='field_member_facebook'}</a></p>
             {/if}
             {if !empty($listing.twitter)}
-                <p><span class="fa fa-twitter"></span> <a href="{$listing.twitter}">{lang key='field_member_twitter'}</a></p>
+                <p><span class="fa fa-twitter"></span> <a href="{$listing.twitter|escape}">{lang key='field_member_twitter'}</a></p>
             {/if}
             {if !empty($listing.gplus)}
-                <p><span class="fa fa-google-plus"></span> <a href="{$listing.gplus}">{lang key='field_member_gplus'}</a></p>
+                <p><span class="fa fa-google-plus"></span> <a href="{$listing.gplus|escape}">{lang key='field_member_gplus'}</a></p>
             {/if}
             {if !empty($listing.linkedin)}
-                <p><span class="fa fa-linkedin"></span> <a href="{$listing.linkedin}">{lang key='field_member_linkedin'}</a></p>
+                <p><span class="fa fa-linkedin"></span> <a href="{$listing.linkedin|escape}">{lang key='field_member_linkedin'}</a></p>
             {/if}
         </div>
 
@@ -39,8 +39,8 @@
         {/if}
 
         {foreach $fields as $field}
-            {if !in_array($field.name, array('username', 'avatar', 'fullname', 'phone', 'website', 'facebook', 'twitter', 'gplus', 'linkedin', 'biography')) && 'plan_id' != $field.name}
-                {include file='field-type-content-view.tpl' wrappedValues=true item=$listing}
+            {if !in_array($field.name, ['username', 'avatar', 'fullname', 'phone', 'website', 'facebook', 'twitter', 'gplus', 'linkedin', 'biography']) && 'plan_id' != $field.name}
+                {include 'field-type-content-view.tpl' wrappedValues=true item=$listing}
             {/if}
         {/foreach}
     </div>
