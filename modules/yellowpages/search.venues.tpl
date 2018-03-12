@@ -3,7 +3,7 @@
         <div class="row">
             {foreach $listings as $venue}
                 <div class="col-md-4">
-                    {include 'extra:yellowpages/list-venues'}
+                    {include 'module:yellowpages/list-venues.tpl'}
                 </div>
 
                 {if ($venue@iteration % 3 == 0) && !$venue@last}

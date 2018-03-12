@@ -10,7 +10,7 @@
         <span class="ia-item-view__info__item" title="{lang key='category'}">
             <span class="fa fa-folder-o"></span>
             {foreach $categories as $category}
-                {ia_url item='ycategs' type='link' data=$category text=$category.title}
+                {ia_url item='ycateg' type='link' data=$category text=$category.title}
                 {if !$category@last}/{/if}
             {/foreach}
         </span>
@@ -31,18 +31,18 @@
             <tbody>
                 <tr>
                     <td>{lang key='address'}</td>
-                    <td>{$item.address}, {ia_url item='ylocs' type='link' data=$item text=$item.location}{if $item.zipcode}, {$item.zipcode}{/if}
+                    <td>{$item.address}, {ia_url item='yloc' type='link' data=$item text=$item.location}{if $item.zipcode}, {$item.zipcode}{/if}
                     </td>
                 </tr>
                 {if !empty($item.phone)}
                     <tr>
-                        <td>{lang key='field_venues_phone'}</td>
+                        <td>{lang key='field_venue_phone'}</td>
                         <td>{$item.phone}</td>
                     </tr>
                 {/if}
                 {if $item.url}
                     <tr>
-                        <td>{lang key='field_venues_url'}</td>
+                        <td>{lang key='field_venue_url'}</td>
                         <td>
                             {assign var='url' value='|'|explode:$item.url}
                             <span class="fa fa-external-link"></span> <a href="{$url[0]}" target="_blank">{$url[1]}</a>
@@ -51,23 +51,23 @@
                 {/if}
                 {if !empty($item.email)}
                     <tr>
-                        <td>{lang key='field_venues_email'}</td>
+                        <td>{lang key='field_venue_email'}</td>
                         <td><a href="mailto:{$item.email}" target="_blank">{$item.email}</a></td>
                     </tr>
                 {/if}
                 {if !empty($item.working_hours)}
                     <tr>
-                        <td>{lang key='field_venues_working_hours'}</td>
+                        <td>{lang key='field_venue_working_hours'}</td>
                         <td>{$item.working_hours}</td>
                     </tr>
                 {/if}
                 {if $item.payments_methods}
                     <tr>
-                        <td>{lang key='field_venues_payments_methods'}</td>
+                        <td>{lang key='field_venue_payments_methods'}</td>
                         <td>
                             {$payment_methods = explode(',', $item.payments_methods)}
                             {foreach $payment_methods as $one}
-                                {lang key="field_venues_payments_methods+{$one}"}{if !$one@last}, {/if}
+                                {lang key="field_venue_payments_methods+{$one}"}{if !$one@last}, {/if}
                             {/foreach}
                         </td>
                     </tr>
@@ -84,7 +84,7 @@
 
     {if trim($item.products_services)}
     <div class="ia-item-view__section">
-        <h3>{lang key='field_venues_products_services'}</h3>
+        <h3>{lang key='field_venue_products_services'}</h3>
 
         {$item.products_services}
     </div>
@@ -92,7 +92,7 @@
 
     {if !empty($item.gallery)}
         <div class="ia-item-view__section">
-            <h3>{lang key='field_venues_gallery'}</h3>
+            <h3>{lang key='field_venue_gallery'}</h3>
 
             {ia_add_media files='fotorama'}
 

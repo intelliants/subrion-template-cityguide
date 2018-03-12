@@ -4,9 +4,9 @@
     <summary>Template for Subrion Business Directory</summary>
     <author>Gleb Surinov</author>
     <contributor>Intelliants LLC</contributor>
-    <version>1.1.0</version>
-    <date>2017-05-19</date>
-    <compatibility>4.1</compatibility>
+    <version>1.2.0</version>
+    <date>2018-03-12</date>
+    <compatibility>4.2</compatibility>
 
     <dependency type="package" exist="1">yellowpages</dependency>
 

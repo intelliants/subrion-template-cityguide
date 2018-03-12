@@ -17,13 +17,13 @@
         {ia_hooker name='smartyFrontYpBeforeListingsDisplay'}
 
         {if !empty($listings)}
-            {include 'extra:yellowpages/_sorting'}
+            {include 'module:yellowpages/_sorting.tpl'}
 
             <div class="ia-items">
                 <div class="row">
                     {foreach $listings as $venue}
                         <div class="col-md-4">
-                            {include 'extra:yellowpages/list-venues' iteration=$venue@iteration}
+                            {include 'module:yellowpages/list-venues.tpl' iteration=$venue@iteration}
                         </div>
 
                         {if ($venue@iteration % 3 == 0) && !$venue@last}

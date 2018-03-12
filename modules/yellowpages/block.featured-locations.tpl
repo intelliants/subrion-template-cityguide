@@ -29,7 +29,7 @@
                                                     {else}
                                                         <img src="{$img}no-preview.png" alt="">
                                                     {/if}
-                                                    {ia_url item='venues' type='link' data=$entry text=$entry.venue_title}
+                                                    {ia_url item=$entry.link type='link' data=$entry text=$entry.venue_title}
                                                     <p><span class="fa fa-{if $entry.category_icon_class}{$entry.category_icon_class}{else}folder{/if}"></span> {$entry.category}</p>
                                                 </li>
                                             {/foreach}
