@@ -13,7 +13,7 @@
                     {ia_image file=$member.avatar title=$member.fullname|default:$member.username class='img-circle' gravatar=true email=$member.email width=34 type='thumbnail'}
                 </a>
                 {ia_hooker name='smartyFrontInsideAccountBox'}
-                {ia_menu menus=$menu.contents class='dropdown-menu pull-right' loginout=true}
+                {ia_menu menus=$menu.contents class='dropdown-menu' loginout=true}
             </li>
         </ul>
     {else}
