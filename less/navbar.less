@@ -206,19 +206,21 @@
     }
 
     @media (min-width: @grid-float-breakpoint) {
+      left: 50%;
       margin-top: 15px;
+      .translate(-50%, 0);
 
       &::before {
         display: block;
         content: '';
         position: absolute;
-        left: auto;
-        right: 15px;
+        left: 50%;
         bottom: 100%;
         border-left:   7px solid transparent;
         border-right:  7px solid transparent;
         border-bottom: 8px solid #fff;
         border-bottom-color: #fff;
+        .translate(-50%, 0);
       }
     }
   }
